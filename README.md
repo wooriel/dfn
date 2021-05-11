@@ -1,2 +1,2 @@
-# dfn
-Implementation of Deep Functional Neural Net
+# Deep Functional Net
+Implementation of Deep Functional Net
