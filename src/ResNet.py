@@ -71,15 +71,8 @@ class DFM(nn.Module):
         G_trans = G_mat.transpose(2, 1)
         C_mats = []
         for i in range(src_desc.size(0)):
-#             inv = torch.inverse(F_trans[i] @ F_mat[i]) 
             C = torch.inverse(F_trans[i] @ F_mat[i]) @ F_trans[i] @ G_mat[i] #352*352
             C_mats.append(C[:120, :120].t().unsqueeze(0))
-#             C = torch.matmul(torch.matmul(inv, F_trans[i]), G_mat[i]) # 352*352
-#             if i == 0:
-#                 C_mat = C.unsqueeze(0)[:, 0:120, :]
-#             else:
-#                 C_mat = torch.cat((C_mat, C.unsqueeze(0)[:, 0:120, :]), dim=0)
-#         C = C.transpose(2, 1)
         C = torch.cat(C_mats, dim=0)
         # soft correspondence matrix
         P = torch.abs(torch.bmm(torch.bmm(tar_eigen, C), src_eigen.transpose(2, 1)))
