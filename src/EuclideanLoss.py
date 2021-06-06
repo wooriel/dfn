@@ -7,6 +7,7 @@ class EuclideanLoss(nn.Module):
         super(EuclideanLoss, self).__init__()
     
     def forward(self, P, dist_x, dist_y):
-        criterion = nn.MSELoss(reduce=True)
-        loss = criterion(dist_x, torch.bmm(torch.transpose(2, 1), torch.bmm(dist_y, Q)))
-        return loss
+        loss = torch.sqrt(((P * dist_y) ** 2).sum((1, 2)))
+#         criterion = nn.MSELoss(reduce=True)
+#         loss = criterion(dist_x, torch.bmm(torch.transpose(P, 2, 1), torch.bmm(dist_y, P)))
+        return torch.mean(loss)
