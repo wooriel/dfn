@@ -16,7 +16,7 @@ https://drive.google.com/drive/folders/1LnDfdcfmzkVQ-wBTZlccZQwQAzaZdFas?usp=sha
 ㄴtest
   ㄴscan_d
   ㄴscan_lb
-<pre />
+</pre>
   
 Then go to dist_map directory, and run run_euclidean.ipynb<br />
 This will generare the necessary distance map in euclidean distance.<br />
