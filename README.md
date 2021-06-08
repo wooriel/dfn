@@ -1,5 +1,5 @@
-# Deep Functional Net
-Implementation of Deep Functional Net
+# Deep Functional Map
+Implementation of Deep Functional Map
 
 Below link contains the data file directory.<br />
 I could not upload some files due to the memory limit.<br />
