@@ -28,4 +28,13 @@ Note that it takes 10+ min to get one geodesic distance map, and its size is eno
 
 You may also run CMC.ipynb in the shot folder.<br />
 In order to run that, you need scan_shot data and scan_d data.<br />
-Again, both datas are available from the google drive link as well.<br />
+The scan_d data are available from the google drive link.<br />
+
+For scan_shot data, I could not download those data one by one and upload it,<br />
+so I thought it would be better to preprocess them.<br />
+
+After cloning this git, stay at the parent directory and clone another git repo.<br />
+git clone https://github.com/fedassa/SHOT.git<br />
+Then go to dfn/shot/run_shot.ipynb.<br />
+Without changing any variable, just run the entire file.<br />
+It will take 10~20minutes creating the data.
