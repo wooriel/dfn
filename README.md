@@ -15,12 +15,17 @@ https://drive.google.com/drive/folders/1LnDfdcfmzkVQ-wBTZlccZQwQAzaZdFas?usp=sha
   ㄴreg_shot (it is already in git)
 ㄴtest
   ㄴscan_d
+  ㄴscan_shot
   ㄴscan_lb
 </pre>
   
 Then go to dist_map directory, and run run_euclidean.ipynb<br />
 This will generare the necessary distance map in euclidean distance.<br />
 
-It is possible to run run_geodesic.ipynb as well, but you need to install gdist<br />
-pip install tvb-gdist<br />
-(this is python binding for calculating geodesic distance written in C++)<br />
+It is possible to run run_geodesic.ipynb as well, but you need to install gdist.<br />
+pip install tvb-gdist (this is python binding for calculating geodesic distance written in C++)<br />
+Note that it takes 10+ min to get one geodesic distance map, and its size is enormously big.<br />
+
+You may also run CMC.ipynb in the shot folder.<br />
+In order to run that, you need scan_shot data and scan_d data.<br />
+Again, both datas are available from the google drive link as well.<br />
